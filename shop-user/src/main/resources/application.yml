@@ -1,0 +1,16 @@
+server:
+  port: 8070
+spring:
+  application:
+    name: servier-user
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://106.13.207.45:3765/xxb?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    username: root
+    password: 123456
+    jpa:
+     properties:
+      hibernate:
+        hbm2ddl:
+           auto: update
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect

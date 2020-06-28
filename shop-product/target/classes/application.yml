@@ -1,0 +1,20 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: servier-product
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://127.0.0.1:3306/product?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    username: root
+    password: 123456
+    jpa:
+     properties:
+      hibernate:
+        hbm2ddl:
+           auto: update
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
